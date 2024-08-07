@@ -1,8 +1,14 @@
 import Link from 'next/link';
+import styles from '@/styles/navbar.module.css';
+
+import { useContext } from 'react';
+import { ScrollHandlerContext } from '@/pages/_app';
 
 const Navbar = () => {
+  const { isScrolled } = useContext(ScrollHandlerContext);
+
   return (
-    <div className='flex justify-center px-4 fixed top-0 left-0 h-[102px] min-w-full z-10'>
+    <div className={isScrolled ? styles['navbar-scrolled'] : styles.navbar}>
       <div className='w-full max-w-7xl bg-green-500'>Header</div>
     </div>
   );
