@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '@/layout';
-import HeroHeader from '@/section/HeroHeader';
+import HeroHeader from '@/section/Home/HeroHeader';
+import OurServices from '@/section/Home/OurServices';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       </Head>
       <Layout>
         <HeroHeader />
+        <OurServices />
       </Layout>
     </>
   );

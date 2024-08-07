@@ -1,18 +1,23 @@
-.hero-header-container {
+.container {
   @apply flex justify-center px-4 h-[756px] xl:h-[810px] w-full relative;
   background-image: url('../assets/hero-header.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.hero-header-title {
+.content {
+  @apply text-center sm:text-left w-full sm:!w-[610px];
+}
+.title {
   @apply text-[68px] sm:text-[112px] leading-none text-[#D6B66B];
 }
-.hero-header-subtitle {
-  @apply text-2xl sm:text-5xl leading-none text-[#FAF9F5] -mt-2 sm:-mt-4;
+.subtitle {
+  @apply text-2xl sm:text-5xl leading-none text-[#FAF9F5] -mt-2 sm:-mt-4 font-bold;
 }
-.hero-header-cta {
+.description {
+  @apply text-[#FAF9F5] text-base sm:text-[21px] sm:leading-7 mt-2
+}
+.cta {
   @apply border-2 border-[#FAF9F5] text-[#FAF9F5] rounded-full;
   padding: 1rem 1.25rem;
 }
