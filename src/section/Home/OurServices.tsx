@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ourServices from '@/data/ourServices';
+import ourServices from '@/data/our-services';
 import styles from '@/styles/our-services.module.css';
 
 const OurServices = () => {

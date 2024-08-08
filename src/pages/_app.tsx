@@ -22,7 +22,9 @@ export default function App({ Component, pageProps }: AppProps) {
       const scrollTop = document.scrollingElement?.scrollTop;
       const width = document.scrollingElement?.clientWidth;
       const isScrolledEnough =
-        (width! >= 640 && scrollTop! >= 120) || (width! < 640 && scrollTop! >= 157);
+        (width! > 1280 && scrollTop! >= 164) ||
+        (width! >= 640 && width! < 1280 && scrollTop! >= 136) ||
+        (width! < 640 && scrollTop! >= 173);
 
       setIsScrolled(isScrolledEnough);
     });
