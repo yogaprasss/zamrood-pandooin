@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={isScrolled ? styles['navbar-scrolled'] : styles.navbar}>
+      <div className={`${styles.navbar} ${isScrolled && styles.scrolled}`}>
         <div className='w-full max-w-7xl flex justify-between items-center'>
           <Image src={isScrolled ? LogoColor : LogoWhite} alt='logo' height={50} />
           <div className='hidden lg:flex items-center gap-4'>

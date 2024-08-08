@@ -1,10 +1,7 @@
-.navbar, .navbar-scrolled {
+.navbar, .navbar.scrolled {
   @apply flex justify-center px-4 fixed top-0 left-0 h-[86px] min-w-full z-10 duration-200;
 }
-.navbar {
-  @apply bg-transparent;
-}
-.navbar-scrolled {
+.navbar.scrolled {
   @apply bg-[#faf9f5];
 }
 .nav-item, .nav-item-active {
@@ -13,16 +10,22 @@
 .nav-item {
   @apply border-transparent;
 }
+.navbar .nav-item:hover {
+  @apply bg-[#ffffff10];
+}
+.navbar.scrolled .nav-item:hover {
+  @apply bg-[#0000000b];
+}
 .navbar .nav-item {
   @apply text-[#faf9f5];
 }
-.navbar-scrolled .nav-item {
+.navbar.scrolled .nav-item {
   @apply text-[#0b7373];
 }
 .navbar .nav-item-active {
   @apply border-b-[#faf9f5] text-[#faf9f5];
 }
-.navbar-scrolled .nav-item-active {
+.navbar.scrolled .nav-item-active {
   @apply border-b-[#0b7373] text-[#0b7373];
 }
 .nav-item-btn {
@@ -34,10 +37,10 @@
 .navbar .nav-item-btn:hover {
   @apply bg-[#faf9f5] text-[#0b7373];
 }
-.navbar-scrolled .nav-item-btn {
+.navbar.scrolled .nav-item-btn {
   @apply text-[#0b7373] border-[#0b7373];
 }
-.navbar-scrolled .nav-item-btn:hover {
+.navbar.scrolled .nav-item-btn:hover {
   @apply bg-[#0b7373] text-[#faf9f5];
 }
 .menu-btn, .close-btn {
@@ -46,7 +49,7 @@
 .navbar .menu-btn {
   @apply border-[#faf9f5]
 }
-.navbar-scrolled .menu-btn,
+.navbar.scrolled .menu-btn,
 .close-btn {
   @apply border-[#0b7373]
 }
@@ -57,9 +60,8 @@
   @apply translate-x-full;
 }
 .menus-mobile {
-  @apply flex flex-col gap-4 pr-2;
+  @apply flex flex-col gap-4 pr-2 pb-4 overflow-y-scroll;
   height: calc(100vh - 86px);
-  overflow-y: scroll;
 }
 .nav-item-mobile {
   @apply px-4 py-3 bg-transparent rounded-md text-[#0b7373];
