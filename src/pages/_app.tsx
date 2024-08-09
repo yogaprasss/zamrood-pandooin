@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 
 import type { AppProps } from 'next/app';
 
@@ -16,6 +17,7 @@ export const ScrollHandlerContext = createContext(defaultValueScrollHandlerConte
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [queryClient] = useState(() => new QueryClient());
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
@@ -31,8 +33,10 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <ScrollHandlerContext.Provider value={{ isScrolled }}>
-      <Component {...pageProps} />
-    </ScrollHandlerContext.Provider>
+    <QueryClientProvider client={queryClient}>
+      <ScrollHandlerContext.Provider value={{ isScrolled }}>
+        <Component {...pageProps} />
+      </ScrollHandlerContext.Provider>
+    </QueryClientProvider>
   );
 }

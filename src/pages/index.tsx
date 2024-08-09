@@ -3,6 +3,7 @@ import Layout from '@/layout';
 import HeroHeader from '@/section/Home/HeroHeader';
 import OurServices from '@/section/Home/OurServices';
 import CustomYourTrip from '@/section/Home/CustomYourTrip';
+import Destinations from '@/section/Home/Destinations';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <HeroHeader />
         <OurServices />
         <CustomYourTrip />
+        <Destinations />
       </Layout>
     </>
   );

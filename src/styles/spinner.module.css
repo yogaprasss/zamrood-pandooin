@@ -1,0 +1,15 @@
+.spinner {
+  @apply w-16 h-16 sm:w-24 sm:h-24 border-4 border-[#f3f3f3] border-t-[#71c2a2] rounded-full;
+  -webkit-animation: spin 1.25s linear infinite;
+  animation: spin 1.25s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
