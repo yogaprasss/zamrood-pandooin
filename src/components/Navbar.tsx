@@ -23,7 +23,9 @@ const Navbar = () => {
     <>
       <div className={`${styles.navbar} ${isScrolled && styles.scrolled}`}>
         <div className='w-full max-w-7xl flex justify-between items-center'>
-          <Image src={isScrolled ? LogoColor : LogoWhite} alt='logo' height={50} />
+          <Link href='/'>
+            <Image src={isScrolled ? LogoColor : LogoWhite} alt='logo' height={50} />
+          </Link>
           <div className='hidden lg:flex items-center gap-4'>
             {navigationItems.map((item) => {
               const isActive = item.id === 'homepage' ? asPath === '/' : asPath.includes(item.href);
@@ -41,7 +43,7 @@ const Navbar = () => {
               href='https://wa.me/6283831556160?text=Hi,%20I%20wanna%20ask%20question%20about%20Zamrood'
               target='_blank'
               rel='noopener noreferrer'
-              className={styles['nav-item-btn']}
+              className={`px-6 py-3 btn-outlined ${isScrolled ? 'green hover-green' : 'white hover-white'}`}
             >
               Need Assistance?
             </Link>
@@ -58,7 +60,7 @@ const Navbar = () => {
           className='flex-grow h-full bg-black opacity-60 sm:bg-transparent'
           onClick={toggleMenu}
         />
-        <div className='h-full bg-[#faf9f5] px-4'>
+        <div className='h-full bg-white px-4'>
           <div className='w-full h-[86px] flex justify-end items-center'>
             <button className={styles['close-btn']} onClick={toggleMenu}>
               <Image src={CloseIcon} alt='close-btn' height={28} />
@@ -81,7 +83,7 @@ const Navbar = () => {
               href='https://wa.me/6283831556160?text=Hi,%20I%20wanna%20ask%20question%20about%20Zamrood'
               target='_blank'
               rel='noopener noreferrer'
-              className={styles['nav-item-mobile-btn']}
+              className='w-full py-3 flex justify-center border border-green rounded-full text-green'
             >
               Need Assistance?
             </Link>

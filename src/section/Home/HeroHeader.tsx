@@ -13,7 +13,9 @@ const HeroHeader = () => {
           </p>
           <br />
           <br />
-          <Link href='#destination' className={styles.cta}>Take me there</Link>
+          <Link href='#destination' className='btn-outlined white hover-gold py-4 px-5'>
+            Take me there
+          </Link>
         </div>
       </div>
     </div>

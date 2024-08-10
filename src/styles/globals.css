@@ -38,3 +38,31 @@ a {
 .header-unbounded {
   font-family: unbounded;
 }
+
+.btn-outlined, .btn-solid {
+  @apply border-2 rounded-full font-bold duration-200;
+}
+
+.btn-outlined.white {
+  @apply border-white text-white;
+}
+
+.btn-outlined.green {
+  @apply border-green text-green;
+}
+
+.btn-solid.white, .btn-outlined.hover-white:hover, .btn-solid.hover-white:hover {
+  @apply border-white bg-white text-green;
+}
+
+.btn-solid.gold, .btn-outlined.hover-gold:hover, .btn-solid.hover-gold:hover {
+  @apply border-gold bg-gold text-white;
+}
+
+.btn-solid.green, .btn-outlined.hover-green:hover, .btn-solid.hover-green:hover {
+  @apply border-green bg-green text-white;
+}
+
+.btn-solid.dark-green, .btn-outlined.hover-dark-green:hover, .btn-solid.hover-dark-green:hover {
+  @apply border-dark-green bg-dark-green text-white;
+}

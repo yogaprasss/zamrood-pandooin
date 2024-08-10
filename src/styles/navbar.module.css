@@ -2,7 +2,7 @@
   @apply flex justify-center px-4 fixed top-0 left-0 h-[86px] min-w-full z-10 duration-200;
 }
 .navbar.scrolled {
-  @apply bg-[#faf9f5];
+  @apply bg-white;
 }
 .nav-item, .nav-item-active {
   @apply px-6 py-3 border-b-2 border-t-2 border-t-transparent font-bold;
@@ -17,41 +17,26 @@
   @apply bg-[#0000000b];
 }
 .navbar .nav-item {
-  @apply text-[#faf9f5];
+  @apply text-white;
 }
 .navbar.scrolled .nav-item {
-  @apply text-[#0b7373];
+  @apply text-green;
 }
 .navbar .nav-item-active {
-  @apply border-b-[#faf9f5] text-[#faf9f5];
+  @apply border-b-white text-white;
 }
 .navbar.scrolled .nav-item-active {
-  @apply border-b-[#0b7373] text-[#0b7373];
-}
-.nav-item-btn {
-  @apply px-6 py-3 border-2 rounded-full font-bold duration-200;
-}
-.navbar .nav-item-btn {
-  @apply text-[#faf9f5] border-[#faf9f5];
-}
-.navbar .nav-item-btn:hover {
-  @apply bg-[#faf9f5] text-[#0b7373];
-}
-.navbar.scrolled .nav-item-btn {
-  @apply text-[#0b7373] border-[#0b7373];
-}
-.navbar.scrolled .nav-item-btn:hover {
-  @apply bg-[#0b7373] text-[#faf9f5];
+  @apply border-b-green text-green;
 }
 .menu-btn, .close-btn {
   @apply w-12 h-12 flex justify-center items-center border-2 rounded-full;
 }
 .navbar .menu-btn {
-  @apply border-[#faf9f5]
+  @apply border-white
 }
 .navbar.scrolled .menu-btn,
 .close-btn {
-  @apply border-[#0b7373]
+  @apply border-green
 }
 .menus-mobile-container {
   @apply fixed top-0 left-0 w-screen h-screen duration-200 z-20 flex lg:hidden;
@@ -64,11 +49,8 @@
   height: calc(100vh - 86px);
 }
 .nav-item-mobile {
-  @apply px-4 py-3 bg-transparent rounded-md text-[#0b7373];
+  @apply px-4 py-3 bg-transparent rounded-md text-green;
 }
 .nav-item-mobile.active {
-  @apply text-[#faf9f5] bg-[#0b7373];
-}
-.nav-item-mobile-btn {
-  @apply w-full py-3 flex justify-center border border-[#0b7373] rounded-full text-[#0b7373];
+  @apply text-white bg-green;
 }

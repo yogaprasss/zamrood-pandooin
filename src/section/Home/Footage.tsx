@@ -29,13 +29,10 @@ const FootageMobile: FC<FooterMobileProps> = ({ images }) => {
 
 const Footage = () => {
   return (
-    <div
-      id='footage'
-      className='flex justify-center px-4 py-8 sm:py-12 w-full relative bg-[#D6B66B]'
-    >
+    <div id='footage' className='flex justify-center px-4 py-8 sm:py-12 w-full relative bg-gold'>
       <div className='w-full max-w-7xl h-full'>
         <div>
-          <h3 className='header-signature text-5xl sm:text-[72px] leading-none text-[#0B7373]'>
+          <h3 className='header-signature text-5xl sm:text-[72px] leading-none text-green'>
             Luxury Footage
           </h3>
           <div className='w-full mt-4 block sm:hidden'>

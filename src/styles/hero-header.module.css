@@ -9,15 +9,11 @@
   @apply text-center sm:text-left w-full sm:!w-[610px];
 }
 .title {
-  @apply text-[68px] sm:text-[112px] leading-none text-[#D6B66B];
+  @apply text-[68px] sm:text-[112px] leading-none text-gold;
 }
 .subtitle {
-  @apply text-2xl sm:text-5xl leading-none text-[#FAF9F5] -mt-2 sm:-mt-4 font-bold;
+  @apply text-2xl sm:text-5xl leading-none text-white -mt-2 sm:-mt-4 font-bold;
 }
 .description {
-  @apply text-[#FAF9F5] text-base sm:text-[21px] sm:leading-7 mt-2
-}
-.cta {
-  @apply border-2 border-[#FAF9F5] text-[#FAF9F5] rounded-full;
-  padding: 1rem 1.25rem;
+  @apply text-white text-base sm:text-[21px] sm:leading-7 mt-2
 }
