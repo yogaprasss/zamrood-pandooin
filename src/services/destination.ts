@@ -55,8 +55,7 @@ export const getDestination = async () => {
     description: item.itinerary_short_description,
     organizer: item.partner_name,
     price: Number(item.related_variant.itinerary_variant_pub_price),
-    // discountPrice: Number(item.related_variant.itinerary_variant_disc_price),
-    discountPrice: 1000000,
+    discountPrice: Number(item.related_variant.itinerary_variant_disc_price),
     images: item.related_galleries.map((gallery) => gallery.src),
     duration: item.itinerary_day,
     slug: item.itinerary_slug

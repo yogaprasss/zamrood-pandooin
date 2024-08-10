@@ -49,7 +49,7 @@ const DestinationContent: FC<DestinationContentProps> = ({
   return (
     <div className={`flex flex-col ${!isSmallCard && 'sm:flex-row'} gap-4`}>
       <div className={`w-full h-56 sm:h-96 relative block ${isContentOnRight && 'sm:hidden'}`}>
-        <Image src={images[0]} alt={'img' + id} layout='fill' className='object-cover' />
+        <Image src={images[indexImg]} alt={'img' + id} layout='fill' className='object-cover' />
       </div>
       <div className='w-full flex flex-col justify-between'>
         <div>
@@ -68,7 +68,7 @@ const DestinationContent: FC<DestinationContentProps> = ({
         </div>
         <div className='flex justify-between items-end mt-8 sm:mt-0'>
           <div>
-            <p className='text-sm sm:text-base'>Start from</p>
+            <p className='text-sm sm:text-base text-[#004040]'>Start from</p>
             {discountPrice > 0 && (
               <h4 className='text-[#B8B8B8] text-base sm:text-lg font-bold line-through'>
                 {formatCurrency(price)}
@@ -87,7 +87,7 @@ const DestinationContent: FC<DestinationContentProps> = ({
         </div>
       </div>
       <div className={`w-full h-96 relative hidden ${isContentOnRight && 'sm:block'}`}>
-        <Image src={images[0]} alt={'img' + id} layout='fill' className='object-cover' />
+        <Image src={images[indexImg]} alt={'img' + id} layout='fill' className='object-cover' />
       </div>
     </div>
   );
