@@ -1,35 +1,4 @@
-interface DestionationDataProps {
-  itinerary_id: string;
-  itinerary_name: string;
-  itinerary_day: number;
-  itinerary_slug: string;
-  partner_name: string;
-  partner_alias: string;
-  itinerary_location: string;
-  itinerary_short_description: string;
-  itinerary_long_description: string;
-  morph_class: string;
-  related_galleries: RelatedGallery[];
-  related_variant: RelatedVariant;
-}
-
-interface RelatedGallery {
-  itinerary_id: string;
-  gallery_id: number;
-  gallery_alt_text: string;
-  gallery_path: string;
-  src: string;
-  title: string;
-}
-
-interface RelatedVariant {
-  itinerary_id: string;
-  itinerary_variant_id: number;
-  itinerary_variant_pub_price: string;
-  itinerary_variant_disc_price: string;
-  unit_name: string;
-  related_unit: null;
-}
+import { ResponseDestinationData } from '@/pages/api/destination';
 
 export interface DestinationContentProps {
   id: string;
@@ -46,10 +15,9 @@ export interface DestinationContentProps {
 };
 
 export const getDestination = async () => {
-  const url = process.env.NEXT_PUBLIC_BASE_URL + 'itinerary?highlight=true';
-  const result = await fetch(url);
-  const data = (await result.json()).data as DestionationDataProps[];
-  const destionationContent = data.map((item) => ({
+  const result = await fetch('/api/destination');
+  const data = await result.json() as ResponseDestinationData;
+  const destionationContent = data.data?.map((item) => ({
     id: item.itinerary_id,
     title: item.itinerary_name,
     description: item.itinerary_short_description,
