@@ -139,7 +139,7 @@ const Destinations = () => {
             <div className='flex justify-center mt-12'>
               <Spinner />
             </div>
-            <div className='text-center mt-4'>Preparing our awesome destination....</div>
+            <div className='text-center mt-4'>Preparing our awesome destinations....</div>
           </>
         )}
         <div className='mt-12 flex flex-col gap-16'>

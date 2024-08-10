@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from '@/components/Image';
 import Spinner from '@/components/Spinner';
 
-
 import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getArticle } from '@/services/article';
@@ -56,7 +55,7 @@ const Article = () => {
             <div className='flex justify-center mt-12'>
               <Spinner />
             </div>
-            <div className='text-center mt-4'>Preparing our awesome destination....</div>
+            <div className='text-center mt-4'>Preparing our awesome writings....</div>
           </>
         ) : (
           <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4'>
