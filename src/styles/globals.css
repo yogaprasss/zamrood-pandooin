@@ -27,6 +27,10 @@ body {
   background: #faf9f5;
 }
 
+a {
+  cursor: pointer !important;
+}
+
 .header-signature {
   font-family: thesignature;
 }

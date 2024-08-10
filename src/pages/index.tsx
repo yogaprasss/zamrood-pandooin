@@ -5,6 +5,7 @@ import OurServices from '@/section/Home/OurServices';
 import CustomYourTrip from '@/section/Home/CustomYourTrip';
 import Destinations from '@/section/Home/Destinations';
 import Footage from '@/section/Home/Footage';
+import CTA from '@/section/Home/CTA';
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <CustomYourTrip />
         <Destinations />
         <Footage />
+        <CTA />
       </Layout>
     </>
   );
