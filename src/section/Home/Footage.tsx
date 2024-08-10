@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Lightbox from 'yet-another-react-lightbox';
+import Separator from '@/components/Separator';
 
 import { useCallback, useEffect, useState } from 'react';
 import { Thumbnails, Zoom, Fullscreen } from 'yet-another-react-lightbox/plugins';
@@ -94,7 +95,9 @@ const Footage = () => {
                   </div>
                 ))}
               </div>
-              <div className='h-12 my-4'></div>
+              <div className='my-4'>
+                <Separator isWhite />
+              </div>
               <div className='grid grid-cols-3 gap-4'>
                 {footageDesktop.slice(3).map((item, index) => (
                   <div

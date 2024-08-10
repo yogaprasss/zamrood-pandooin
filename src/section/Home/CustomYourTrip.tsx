@@ -25,7 +25,7 @@ const CustomYourTrip = () => {
             href='https://pandooin.com/id/tailor-made/create?utm_source=zamrood&utm_medium=website&utm_campaign=premium'
             target='_blank'
             rel='noopener noreferrer'
-            className='relative sm:px-4 lg:px-6 sm:py-2 lg:py-3 mt-4 w-full sm:w-fit flex justify-center btn-solid dark-green hover-gold text-base sm:text-sm lg:text-base'
+            className='relative sm:px-4 lg:px-6 py-2 lg:py-3 mt-4 w-full sm:w-fit flex justify-center btn-solid dark-green hover-gold text-base sm:text-sm lg:text-base'
           >
             Customize Your Trip
           </Link>
