@@ -19,12 +19,14 @@ const CTA = () => {
           />
         </div>
         <div id='bg-filter' className='w-full h-44 sm:h-28 absolute bg-black top-0 opacity-[0.36]' />
-        <div className='w-full h-44 sm:h-28 absolute top-0 p-5 flex flex-col sm:flex-row sm:justify-between sm:items-center'>
-          <div className='w-full flex justify-center sm:justify-start'>
+        <div className='w-full h-44 sm:h-28 absolute top-0 p-5 flex flex-col sm:flex-row justify-between sm:items-center'>
+          <div className='flex justify-center sm:justify-start'>
             <Image src={Logo} alt='logo' height={56} />
           </div>
-          <div className='w-full h-20 sm:h-14 flex flex-col justify-between items-center sm:items-end text-white'>
-            <p className='text-center'>Want to see other destinations? Check us out at our website</p>
+          <div className='flex flex-col justify-center items-center sm:items-end text-white'>
+            <p className='text-center sm:text-right text-sm lg:text-base'>
+              Want to see other destinations? Check us out at our website
+            </p>
             <Link
               href='https://pandooin.com'
               target='_blank'

@@ -5,15 +5,12 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.content {
-  @apply text-center sm:text-left w-full sm:!w-[610px];
-}
 .title {
-  @apply text-[68px] sm:text-[112px] leading-none text-gold;
+  @apply text-[68px] sm:text-[88px] lg:text-[112px] leading-none text-gold;
 }
 .subtitle {
-  @apply text-2xl sm:text-5xl leading-none text-white -mt-2 sm:-mt-4 font-bold;
+  @apply text-2xl sm:text-4xl lg:text-5xl leading-none text-white -mt-2 sm:-mt-4 font-bold;
 }
 .description {
-  @apply text-white text-base sm:text-[21px] sm:leading-7 mt-2
+  @apply text-white sm:text-xl lg:text-[21px] sm:leading-7 mt-2
 }

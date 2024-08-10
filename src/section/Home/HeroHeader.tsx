@@ -5,7 +5,7 @@ const HeroHeader = () => {
   return (
     <div className={styles.container}>
       <div className='w-full max-w-7xl h-full flex items-center'>
-        <div className={styles.content}>
+        <div className='text-center sm:text-left w-full sm:w-[560px] lg:!w-[610px]'>
           <h3 className={`header-signature ${styles.title}`}>Premium Travel</h3>
           <h4 className={`header-unbounded ${styles.subtitle}`}>Beyond Expectation</h4>
           <p className={styles.description}>

@@ -8,7 +8,7 @@ const OurServices = () => {
         <h3 className='header-signature text-[52px] sm:text-[80px] leading-none text-green text-center'>
           Beyond Premium
         </h3>
-        <h4 className='header-unbounded sm:text-3xl leading-none text-dark-green sm:-mt-2 text-center font-bold'>
+        <h4 className='header-unbounded sm:text-2xl lg:text-3xl leading-none text-dark-green sm:-mt-2 text-center font-bold'>
           ELEVATE YOUR EXPERIENCE
         </h4>
         <div className='mt-16 grid grid-cols-1 sm:grid-cols-3 gap-12'>

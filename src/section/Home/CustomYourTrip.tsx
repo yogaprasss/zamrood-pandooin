@@ -9,11 +9,11 @@ const CustomYourTrip = () => {
       id='discover-tailored-experience'
       className='flex justify-center px-4 py-8 sm:py-12 w-full relative'
     >
-      <div className='w-full max-w-7xl h-full block text-center sm:text-left sm:flex sm:justify-center sm:items-center gap-4 lg:gap-8'>
-        <div className='flex justify-center md:hidden'>
+      <div className='w-full max-w-7xl h-full block text-center sm:text-left sm:flex sm:justify-center sm:items-center gap-4 md:gap-8'>
+        <div className='flex justify-center lg:hidden'>
           <Image src={IllustrationSm} alt='illustration' height={176} />
         </div>
-        <Image src={IllustrationLg} alt='illustration' height={256} className='hidden md:block' />
+        <Image src={IllustrationLg} alt='illustration' height={256} className='hidden lg:block' />
         <div className='w-fit'>
           <h3 className='header-unbounded text-[#004040] text-[22px] leading-8 lg:text-[25px] font-bold'>
             Discover Tailored Experiences
@@ -25,7 +25,7 @@ const CustomYourTrip = () => {
             href='https://pandooin.com/id/tailor-made/create?utm_source=zamrood&utm_medium=website&utm_campaign=premium'
             target='_blank'
             rel='noopener noreferrer'
-            className='relative sm:px-6 py-3 mt-4 w-full sm:w-fit flex justify-center btn-solid dark-green hover-gold'
+            className='relative sm:px-4 lg:px-6 sm:py-2 lg:py-3 mt-4 w-full sm:w-fit flex justify-center btn-solid dark-green hover-gold text-base sm:text-sm lg:text-base'
           >
             Customize Your Trip
           </Link>

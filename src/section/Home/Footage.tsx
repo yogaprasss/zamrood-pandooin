@@ -39,7 +39,7 @@ const Footage = () => {
     <div id='footage' className='flex justify-center px-4 py-8 sm:py-12 w-full relative bg-gold'>
       <div className='w-full max-w-7xl h-full'>
         <div>
-          <h3 className='header-signature text-5xl sm:text-[72px] leading-none text-green'>
+          <h3 className='header-signature text-5xl md:text-6xl lg:text-[72px] leading-none text-green'>
             Luxury Footage
           </h3>
           <div className='w-full mt-4 block sm:hidden'>
@@ -48,7 +48,7 @@ const Footage = () => {
           <div className='w-full mt-8 hidden sm:block'>
             <div className='grid grid-cols-3 gap-4'>
               {footageDesktop.slice(0, 3).map((item, index) => (
-                <div key={'item' + index + 1} className='w-full aspect-square relative block'>
+                <div key={'item' + index + 1} className='w-full aspect-[3/2] relative block'>
                   <Image
                     src={item}
                     alt='footage'
@@ -63,7 +63,7 @@ const Footage = () => {
             <div className='h-12 my-4'></div>
             <div className='grid grid-cols-3 gap-4'>
               {footageDesktop.slice(3).map((item, index) => (
-                <div key={'item' + index + 4} className='w-full aspect-square relative block'>
+                <div key={'item' + index + 4} className='w-full aspect-[3/2] relative block'>
                   <Image
                     src={item}
                     alt='footage'

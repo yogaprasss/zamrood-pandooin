@@ -60,7 +60,7 @@ const Navbar = () => {
           className='flex-grow h-full bg-black opacity-60 sm:bg-transparent'
           onClick={toggleMenu}
         />
-        <div className='h-full bg-white px-4'>
+        <div className='h-full bg-white px-4 sm:shadow-lg'>
           <div className='w-full h-[86px] flex justify-end items-center'>
             <button className={styles['close-btn']} onClick={toggleMenu}>
               <Image src={CloseIcon} alt='close-btn' height={28} />

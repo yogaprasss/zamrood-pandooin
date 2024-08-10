@@ -42,13 +42,13 @@ const DestinationContent: FC<DestinationContentProps> = ({
   useEffect(() => {
     const interval = setInterval(() => {
       setIndexImg((value) => value === images.length - 1 ? 0 : value + 1);
-    }, 10000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className={`flex flex-col ${!isSmallCard && 'sm:flex-row'} gap-4`}>
-      <div className={`w-full h-56 sm:h-96 relative block ${isContentOnRight && 'sm:hidden'}`}>
+    <div className={`flex flex-col ${!isSmallCard && 'sm:flex-row'} gap-4 lg:gap-8`}>
+      <div className={`w-full aspect-video relative block ${isContentOnRight && 'sm:hidden'}`}>
         <Image
           src={images[indexImg]}
           alt={'img' + id}
@@ -64,36 +64,38 @@ const DestinationContent: FC<DestinationContentProps> = ({
             {duration} Day{duration > 1 ? 's' : ''}
             {duration > 1 ? ` ${duration - 1} Night${duration - 1 > 1 ? 's' : ''}` : ''}
           </p>
-          <h2 className='text-green text-xl sm:text-3xl font-bold line-clamp-2'>{title}</h2>
-          <p className='text-dark-green text-xs sm:text-sm font-bold my-2 hidden sm:block'>
+          <h2 className='text-green text-xl sm:text-2xl lg:text-3xl font-bold line-clamp-2'>{title}</h2>
+          <p className='text-dark-green text-xs lg:text-sm font-bold my-2 hidden sm:block'>
             Organized by {organizer}
           </p>
-          <p className='text-dark-green text-sm sm:text-base line-clamp-4 my-2 sm:my-0'>{description}</p>
-          <p className='text-dark-green text-xs sm:text-sm font-bold block sm:hidden'>
+          <p className='text-dark-green text-sm lg:text-base line-clamp-4 sm:line-clamp-3 lg:line-clamp-4 my-2 sm:my-0'>
+            {description}
+          </p>
+          <p className='text-dark-green text-xs lg:text-sm font-bold block sm:hidden'>
             Organized by {organizer}
           </p>
         </div>
-        <div className='flex justify-between items-end mt-8 sm:mt-0'>
+        <div className='flex justify-between items-end mt-8 sm:mt-2 lg:mt-0'>
           <div>
-            <p className='text-sm sm:text-base text-dark-green'>Start from</p>
+            <p className='text-sm lg:text-base text-dark-green'>Start from</p>
             {discountPrice > 0 && (
               <h4 className='text-[#B8B8B8] text-base sm:text-lg font-bold line-through'>
                 {formatCurrency(price)}
               </h4>
             )}
-            <h3 className='text-green text-xl sm:text-2xl font-bold'>
+            <h3 className='text-green text-2xl lg:text-3xl font-bold !leading-none'>
               {formatCurrency(discountPrice || price)}
             </h3>
           </div>
           <Link
             href={`/destination/${slug}`}
-            className='px-2.5 py-2 sm:px-4 sm:py-3 text-sm sm:text-base btn-outlined green hover-green'
+            className='px-2.5 py-2 lg:px-4 lg:py-3 text-sm lg:text-base btn-outlined green hover-green'
           >
             See Details
           </Link>
         </div>
       </div>
-      <div className={`w-full h-96 relative hidden ${isContentOnRight && 'sm:block'}`}>
+      <div className={`w-full aspect-video relative hidden ${isContentOnRight && 'sm:block'}`}>
         <Image
           src={images[indexImg]}
           alt={'img' + id}
@@ -134,7 +136,7 @@ const Destinations = () => {
             <div className='text-center mt-4'>Preparing our awesome destination....</div>
           </>
         )}
-        <div className='mt-12 flex flex-col gap-12'>
+        <div className='mt-12 flex flex-col gap-16'>
           {data?.slice(0, 3)?.map((item, index) => (
             <DestinationContent key={item.id} {...item} isContentOnRight={index % 2 === 1} />
           ))}
