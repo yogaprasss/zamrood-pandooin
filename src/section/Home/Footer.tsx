@@ -11,7 +11,7 @@ const Footer = () => {
         </h3>
         <div className='flex gap-4'>
           {footerItems.map((item) => (
-            <Link href={item.url} target='_blank' rel='noopener noreferrer' title={item.title}>
+            <Link key={item.title} href={item.url} target='_blank' rel='noopener noreferrer' title={item.title}>
               <Image src={item.icon} alt='icon-socmed' height={24} />
             </Link>
           ))}

@@ -62,8 +62,8 @@ const Article = () => {
           <div className='mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4'>
             <ArticleContent {...data?.[0]!} />
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-              {data?.slice(1).map((item) => (
-                <ArticleContent {...item} isSmallCard />
+              {data?.slice(1).map((item, index) => (
+                <ArticleContent key={'item' + index + 1} {...item} isSmallCard />
               ))}
             </div>
           </div>
