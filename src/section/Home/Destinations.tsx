@@ -47,8 +47,8 @@ const DestinationContent: FC<DestinationContentProps> = ({
   }, []);
 
   return (
-    <div className={`flex flex-col ${!isSmallCard && 'sm:flex-row'} gap-4 lg:gap-8`}>
-      <div className={`w-full aspect-video relative block ${isContentOnRight && 'sm:hidden'}`}>
+    <div className={`flex flex-col ${isSmallCard ? '!min-w-56 lg:!min-w-80' : 'sm:flex-row lg:gap-8'} gap-4`}>
+      <div className={`w-full ${isSmallCard ? 'aspect-[4/3]' : 'aspect-video'} relative block ${isContentOnRight && 'sm:hidden'}`}>
         <Image
           src={images[indexImg]}
           alt={'img' + id}
@@ -58,38 +58,44 @@ const DestinationContent: FC<DestinationContentProps> = ({
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
         />
       </div>
-      <div className='w-full flex flex-col justify-between'>
+      <div className={`w-full flex flex-col justify-between ${isSmallCard && 'h-56'}`}>
         <div>
-          <p className='uppercase mb-2 text-sm sm:text-base'>
+          <p className={`uppercase mb-2 text-sm ${!isSmallCard && 'sm:text-base'}`}>
             {duration} Day{duration > 1 ? 's' : ''}
             {duration > 1 ? ` ${duration - 1} Night${duration - 1 > 1 ? 's' : ''}` : ''}
           </p>
-          <h2 className='text-green text-xl sm:text-2xl lg:text-3xl font-bold line-clamp-2'>{title}</h2>
+          <h2 className={`text-green text-xl ${!isSmallCard && 'sm:text-2xl lg:text-3xl'} font-bold line-clamp-2`}>
+            {title}
+          </h2>
           <p className='text-dark-green text-xs lg:text-sm font-bold my-2 hidden sm:block'>
             Organized by {organizer}
           </p>
-          <p className='text-dark-green text-sm lg:text-base line-clamp-4 sm:line-clamp-3 lg:line-clamp-4 my-2 sm:my-0'>
-            {description}
-          </p>
+          {!isSmallCard && (
+            <p className='text-dark-green text-sm lg:text-base line-clamp-4 sm:line-clamp-3 lg:line-clamp-4 my-2 sm:my-0'>
+              {description}
+            </p>
+          )}
           <p className='text-dark-green text-xs lg:text-sm font-bold block sm:hidden'>
             Organized by {organizer}
           </p>
         </div>
-        <div className='flex justify-between items-end mt-8 sm:mt-2 lg:mt-0'>
+        <div className={`flex ${isSmallCard ? 'flex-col gap-3 items-start' : 'items-end'} justify-between mt-8 sm:mt-2 lg:mt-0`}>
           <div>
-            <p className='text-sm lg:text-base text-dark-green'>Start from</p>
+            <p className={`text-sm ${!isSmallCard && 'lg:text-base'} text-dark-green`}>
+              Start from
+            </p>
             {discountPrice > 0 && (
               <h4 className='text-[#B8B8B8] text-base sm:text-lg font-bold line-through'>
                 {formatCurrency(price)}
               </h4>
             )}
-            <h3 className='text-green text-2xl lg:text-3xl font-bold !leading-none'>
+            <h3 className={`text-green ${isSmallCard ? 'text-xl' : 'text-2xl lg:text-3xl'} font-bold !leading-none`}>
               {formatCurrency(discountPrice || price)}
             </h3>
           </div>
           <Link
             href={`/destination/${slug}`}
-            className='px-2.5 py-2 lg:px-4 lg:py-3 text-sm lg:text-base btn-outlined green hover-green'
+            className={`px-2.5 py-2 text-sm ${!isSmallCard && 'lg:px-4 lg:py-3 lg:text-base'} btn-outlined green hover-green`}
           >
             See Details
           </Link>
@@ -140,6 +146,13 @@ const Destinations = () => {
           {data?.slice(0, 3)?.map((item, index) => (
             <DestinationContent key={item.id} {...item} isContentOnRight={index % 2 === 1} />
           ))}
+        </div>
+        <div className='mt-12 w-full overflow-x-scroll'>
+          <div className='flex gap-8 pb-6'>
+            {data?.slice(3)?.map((item) => (
+              <DestinationContent key={item.id} {...item} isSmallCard />
+            ))}
+          </div>
         </div>
         <div className='mt-12 flex justify-center sm:justify-end'>
           <ExploreMoreButton />
