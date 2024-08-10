@@ -7,6 +7,7 @@ import Destinations from '@/section/Home/Destinations';
 import Footage from '@/section/Home/Footage';
 import CTA from '@/section/Home/CTA';
 import Article from '@/section/Home/Article';
+import Footer from '@/section/Home/Footer';
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
         <Footage />
         <CTA />
         <Article />
+        <Footer />
       </Layout>
     </>
   );

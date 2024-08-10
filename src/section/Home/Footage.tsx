@@ -48,7 +48,7 @@ const Footage = () => {
           <div className='w-full mt-8 hidden sm:block'>
             <div className='grid grid-cols-3 gap-4'>
               {footageDesktop.slice(0, 3).map((item, index) => (
-                <div key={'item' + index + 1} className='w-full h-56 md:h-64 lg:h-96 relative block'>
+                <div key={'item' + index + 1} className='w-full aspect-square relative block'>
                   <Image
                     src={item}
                     alt='footage'
@@ -63,7 +63,7 @@ const Footage = () => {
             <div className='h-12 my-4'></div>
             <div className='grid grid-cols-3 gap-4'>
               {footageDesktop.slice(3).map((item, index) => (
-                <div key={'item' + index + 4} className='w-full h-56 md:h-64 lg:h-96 relative block'>
+                <div key={'item' + index + 4} className='w-full aspect-square relative block'>
                   <Image
                     src={item}
                     alt='footage'
