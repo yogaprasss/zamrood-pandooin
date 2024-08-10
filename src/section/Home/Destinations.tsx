@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '@/components/Image';
 import Spinner from '@/components/Spinner';
 
 import { useEffect, useState } from 'react';
@@ -49,7 +49,14 @@ const DestinationContent: FC<DestinationContentProps> = ({
   return (
     <div className={`flex flex-col ${!isSmallCard && 'sm:flex-row'} gap-4`}>
       <div className={`w-full h-56 sm:h-96 relative block ${isContentOnRight && 'sm:hidden'}`}>
-        <Image src={images[indexImg]} alt={'img' + id} layout='fill' className='object-cover' />
+        <Image
+          src={images[indexImg]}
+          alt={'img' + id}
+          fill
+          priority
+          className='object-cover'
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+        />
       </div>
       <div className='w-full flex flex-col justify-between'>
         <div>
@@ -87,7 +94,14 @@ const DestinationContent: FC<DestinationContentProps> = ({
         </div>
       </div>
       <div className={`w-full h-96 relative hidden ${isContentOnRight && 'sm:block'}`}>
-        <Image src={images[indexImg]} alt={'img' + id} layout='fill' className='object-cover' />
+        <Image
+          src={images[indexImg]}
+          alt={'img' + id}
+          fill
+          priority
+          className='object-cover'
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+        />
       </div>
     </div>
   );
